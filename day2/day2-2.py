@@ -1,9 +1,6 @@
 liste = open('./day2/input.txt','r').read().split('\n')
 taille = len(liste)
-
-
 i=0
-
 horizontal = 0
 depth = 0
 
