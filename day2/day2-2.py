@@ -1,8 +1,13 @@
+from typing import List
+
+
 liste = open('./day2/input.txt','r').read().split('\n')
 taille = len(liste)
 i=0
 horizontal = 0
 depth = 0
+
+listey = []
 
 while i < taille:
     ligne= liste[i].split();
@@ -10,9 +15,10 @@ while i < taille:
     avancé = ligne[1]
     if mouvement == "forward":
         horizontal = horizontal + int(avancé)
-        y=0
         y = depth*int(avancé)
-
+        listey.append(y)
+        
+    
     if mouvement == "up":
         depth = depth - int(avancé)
 
@@ -20,10 +26,9 @@ while i < taille:
         depth = depth + int(avancé)
 
     i=i+1
-    print(i)
+print(sum(listey))
 print("y : ",y)
-depth=y
-somme=horizontal*depth
+somme=horizontal*sum(listey)
 print("horizontal ",horizontal)
 print("depth ", depth)
 print("somme ",somme)
