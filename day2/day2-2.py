@@ -12,7 +12,9 @@ while i < taille:
     mouvement = ligne[0]
     avancé = ligne[1]
     if mouvement == "forward":
-        horizontal = horizontal+ int(avancé)
+        horizontal = horizontal + int(avancé)
+        y=0
+        y = depth*int(avancé)
 
     if mouvement == "up":
         depth = depth - int(avancé)
@@ -20,11 +22,12 @@ while i < taille:
     if mouvement == "down":
         depth = depth + int(avancé)
 
-
     i=i+1
-print(horizontal*depth)
-print(horizontal, " ",depth)
-
-
-
-
+    print(i)
+print("y : ",y)
+depth=y
+somme=horizontal*depth
+print("horizontal ",horizontal)
+print("depth ", depth)
+print("somme ",somme)
+print(taille)
