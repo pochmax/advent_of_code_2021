@@ -1,4 +1,4 @@
-liste = open('input.txt','r').read().split('\n')
+liste = open('./day1/input.txt','r').read().split('\n')
 taille = len(liste)
 i=1
 a=1
